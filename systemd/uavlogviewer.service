@@ -7,9 +7,9 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-User=andrii-berezen
-Group=andrii-berezen
-WorkingDirectory=/home/andrii-berezen/Desktop/dev/UAVLogViewer
+User=tower
+Group=tower
+WorkingDirectory=/srv/tendra/UAVLogViewer
 ExecStart=/usr/bin/docker compose up -d --remove-orphans
 ExecStop=/usr/bin/docker compose down
 ExecReload=/usr/bin/docker compose up -d --build --remove-orphans
